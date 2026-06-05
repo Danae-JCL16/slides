@@ -1,0 +1,255 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tarea #997 - Pizza as a Service 2.0</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/league.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
+    }
+
+    .reveal h2, .reveal h3 {
+      color: #ffffff;
+    }
+
+    .reveal p, .reveal li {
+      color: #e5e7eb;
+      font-size: 1.05em;
+    }
+
+    section {
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .tag {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+    }
+
+    th, td {
+      border: 1px solid white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(255,255,255,0.15);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<section class="center">
+  <h2>🍕 Pizza as a Service 2.0</h2>
+  <p><strong>Tarea #997</strong></p>
+  <p>Modelos de Servicio en la Nube</p>
+</section>
+
+<section>
+  <h3>¿Qué es Pizza as a Service 2.0?</h3>
+  <p>
+    Es una analogía utilizada para explicar los diferentes modelos de servicio
+    en la nube. Cada forma de obtener una pizza representa el nivel de
+    responsabilidad del usuario y del proveedor.
+  </p>
+</section>
+
+<section>
+  <h3>Comparación General</h3>
+
+  <table>
+    <tr>
+      <th>Modelo</th>
+      <th>Responsabilidad del Usuario</th>
+    </tr>
+    <tr>
+      <td>On-Premises</td>
+      <td>Muy alta</td>
+    </tr>
+    <tr>
+      <td>IaaS</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>PaaS</td>
+      <td>Media</td>
+    </tr>
+    <tr>
+      <td>SaaS</td>
+      <td>Baja</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h3>🍕 On-Premises</h3>
+
+  <p class="tag">Descripción</p>
+  <p>El usuario administra toda la infraestructura y recursos.</p>
+
+  <p class="tag">Ventajas</p>
+  <ul>
+    <li>Control total.</li>
+    <li>Alta personalización.</li>
+  </ul>
+
+  <p class="tag">Desventajas</p>
+  <ul>
+    <li>Costos elevados.</li>
+    <li>Mantenimiento constante.</li>
+  </ul>
+
+  <p class="tag">Ejemplo</p>
+  <p>Centro de datos propio.</p>
+</section>
+
+<section>
+  <h3>☁️ IaaS (Infrastructure as a Service)</h3>
+
+  <p><strong>Analogía:</strong> Pizza para llevar.</p>
+
+  <p class="tag">Descripción</p>
+  <p>El proveedor ofrece infraestructura como servidores y almacenamiento.</p>
+
+  <p class="tag">Ventajas</p>
+  <ul>
+    <li>Escalabilidad.</li>
+    <li>Flexibilidad.</li>
+    <li>Menor inversión inicial.</li>
+  </ul>
+
+  <p class="tag">Desventajas</p>
+  <ul>
+    <li>Requiere conocimientos técnicos.</li>
+    <li>Más administración por parte del usuario.</li>
+  </ul>
+
+  <p class="tag">Casos de uso</p>
+  <ul>
+    <li>Máquinas virtuales.</li>
+    <li>Hosting de aplicaciones.</li>
+  </ul>
+
+  <p class="tag">Ejemplos</p>
+  <p>Amazon EC2, Azure Virtual Machines, Google Compute Engine.</p>
+</section>
+
+<section>
+  <h3>⚙️ PaaS (Platform as a Service)</h3>
+
+  <p><strong>Analogía:</strong> Pizza entregada a domicilio.</p>
+
+  <p class="tag">Descripción</p>
+  <p>El proveedor administra la infraestructura y la plataforma.</p>
+
+  <p class="tag">Ventajas</p>
+  <ul>
+    <li>Desarrollo rápido.</li>
+    <li>Menor administración.</li>
+    <li>Mayor productividad.</li>
+  </ul>
+
+  <p class="tag">Desventajas</p>
+  <ul>
+    <li>Menor control.</li>
+    <li>Dependencia del proveedor.</li>
+  </ul>
+
+  <p class="tag">Casos de uso</p>
+  <ul>
+    <li>Desarrollo web.</li>
+    <li>Aplicaciones empresariales.</li>
+  </ul>
+
+  <p class="tag">Ejemplos</p>
+  <p>AWS Elastic Beanstalk, Google App Engine, Heroku.</p>
+</section>
+
+<section>
+  <h3>💻 SaaS (Software as a Service)</h3>
+
+  <p><strong>Analogía:</strong> Comer pizza en un restaurante.</p>
+
+  <p class="tag">Descripción</p>
+  <p>El usuario solo utiliza la aplicación proporcionada.</p>
+
+  <p class="tag">Ventajas</p>
+  <ul>
+    <li>Fácil implementación.</li>
+    <li>No requiere mantenimiento.</li>
+    <li>Acceso desde cualquier lugar.</li>
+  </ul>
+
+  <p class="tag">Desventajas</p>
+  <ul>
+    <li>Menor personalización.</li>
+    <li>Dependencia de Internet.</li>
+  </ul>
+
+  <p class="tag">Casos de uso</p>
+  <ul>
+    <li>Correo electrónico.</li>
+    <li>Videoconferencias.</li>
+    <li>Herramientas ofimáticas.</li>
+  </ul>
+
+  <p class="tag">Ejemplos</p>
+  <p>Gmail, Google Drive, Microsoft 365 y Zoom.</p>
+</section>
+
+<section>
+  <h3>Comparación Final</h3>
+
+  <ul>
+    <li><strong>IaaS:</strong> Más control y administración.</li>
+    <li><strong>PaaS:</strong> Equilibrio entre control y facilidad.</li>
+    <li><strong>SaaS:</strong> Mayor comodidad y menor administración.</li>
+  </ul>
+</section>
+
+<section class="center">
+  <h2>Conclusión</h2>
+
+  <p>
+    Pizza as a Service 2.0 permite comprender fácilmente los modelos
+    de servicio en la nube.
+  </p>
+
+  <p class="tag">
+    La elección entre IaaS, PaaS y SaaS dependerá de las necesidades
+    de cada organización.
+  </p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  transition: 'slide'
+});
+</script>
+
+</body>
+</html>
+```
