@@ -52,130 +52,178 @@
 <div class="reveal">
 <div class="slides">
 
+  <!-- Portada -->
   <section class="center">
     <h2>🐷 Apache Pig</h2>
     <p>Lenguaje de Alto Nivel para Análisis de Datos</p>
     <p>Procesamiento de Datos en la Nube</p>
   </section>
 
+  <!-- ¿Qué es? -->
   <section>
     <h3>¿Qué es Apache Pig?</h3>
 
     <p>
-      Apache Pig es una plataforma de procesamiento de datos diseñada para trabajar
-      con grandes volúmenes de información dentro del ecosistema Hadoop.
+      Apache Pig es una plataforma de código abierto diseñada para procesar
+      y analizar grandes volúmenes de datos dentro del ecosistema Hadoop.
     </p>
 
     <p>
-      Utiliza un lenguaje llamado <strong>Pig Latin</strong>, que simplifica la
-      creación de procesos de análisis y transformación de datos.
+      Utiliza un lenguaje llamado <strong>Pig Latin</strong>, que permite
+      desarrollar procesos de análisis y transformación de datos de manera
+      más sencilla que programando MapReduce directamente.
     </p>
   </section>
 
+  <!-- Características -->
   <section>
     <h3>Características</h3>
 
     <ul>
-      <li>Lenguaje de alto nivel.</li>
+      <li>Código abierto (Open Source).</li>
       <li>Funciona sobre Hadoop.</li>
-      <li>Utiliza Pig Latin.</li>
-      <li>Convierte scripts en trabajos MapReduce.</li>
-      <li>Procesa grandes cantidades de datos.</li>
-      <li>Maneja datos estructurados y semiestructurados.</li>
+      <li>Utiliza el lenguaje Pig Latin.</li>
+      <li>Procesa grandes volúmenes de datos.</li>
+      <li>Reduce la complejidad de MapReduce.</li>
+      <li>Compatible con datos estructurados y semiestructurados.</li>
+      <li>Escalable y distribuido.</li>
     </ul>
   </section>
 
+  <!-- Cómo funciona -->
   <section>
     <h3>¿Cómo funciona?</h3>
 
     <ol>
       <li>El usuario escribe un script en Pig Latin.</li>
       <li>Apache Pig interpreta el script.</li>
-      <li>El script se convierte en trabajos MapReduce.</li>
-      <li>Hadoop ejecuta el procesamiento.</li>
-      <li>Se generan los resultados.</li>
+      <li>Pig genera automáticamente trabajos MapReduce.</li>
+      <li>Hadoop ejecuta el procesamiento en el clúster.</li>
+      <li>Se obtienen los resultados finales.</li>
     </ol>
 
     <p class="tag">
-      El usuario no necesita programar MapReduce directamente en Java.
+      No es necesario programar MapReduce directamente en Java.
     </p>
   </section>
 
+  <!-- Componentes -->
+  <section>
+    <h3>Componentes Principales</h3>
+
+    <ul>
+      <li><strong>Pig Latin:</strong> lenguaje utilizado para escribir scripts.</li>
+      <li><strong>Motor de ejecución:</strong> traduce los scripts para Hadoop.</li>
+      <li><strong>HDFS:</strong> sistema distribuido donde se almacenan los datos.</li>
+      <li><strong>MapReduce:</strong> ejecuta el procesamiento de los datos.</li>
+    </ul>
+  </section>
+
+  <!-- Ventajas -->
   <section>
     <h3>Ventajas</h3>
 
     <ul>
       <li>Menos código que Java MapReduce.</li>
-      <li>Fácil de aprender para analistas.</li>
+      <li>Fácil de aprender y utilizar.</li>
       <li>Reduce tiempos de desarrollo.</li>
-      <li>Facilita procesos ETL.</li>
-      <li>Permite trabajar con Big Data de forma más sencilla.</li>
+      <li>Ideal para procesos ETL.</li>
+      <li>Compatible con distintos formatos de datos.</li>
+      <li>Incrementa la productividad de los desarrolladores.</li>
     </ul>
   </section>
 
+  <!-- Desventajas -->
   <section>
     <h3>Desventajas</h3>
 
     <ul>
       <li>Depende del ecosistema Hadoop.</li>
-      <li>Menor rendimiento que código MapReduce optimizado manualmente.</li>
+      <li>Menor rendimiento que MapReduce optimizado manualmente.</li>
+      <li>No está diseñado para procesamiento en tiempo real.</li>
       <li>Requiere conocimientos básicos de Hadoop.</li>
-      <li>Actualmente existen alternativas más modernas como Apache Spark.</li>
+      <li>Ha sido reemplazado en muchos proyectos por Apache Spark.</li>
     </ul>
   </section>
 
+  <!-- Casos de uso -->
   <section>
     <h3>Casos de Uso</h3>
 
     <ul>
-      <li>Procesos ETL (Extract, Transform, Load).</li>
+      <li>Procesos ETL (Extracción, Transformación y Carga).</li>
       <li>Limpieza y transformación de datos.</li>
       <li>Procesamiento de registros (logs).</li>
-      <li>Preparación de datos para análisis.</li>
-      <li>Minería de datos y Business Intelligence.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h3>Ejemplos de Aplicación</h3>
-
-    <ul>
-      <li>Análisis de comportamiento de usuarios.</li>
-      <li>Procesamiento de grandes volúmenes de registros web.</li>
-      <li>Preparación de información para reportes empresariales.</li>
+      <li>Preparación de datos para análisis y Machine Learning.</li>
       <li>Integración de datos provenientes de múltiples fuentes.</li>
     </ul>
   </section>
 
+  <!-- Aplicaciones -->
   <section>
-    <h3>Ejemplo de Pig Latin</h3>
+    <h3>Ejemplos de Aplicación</h3>
+
+    <ul>
+      <li>Redes sociales: análisis de publicaciones y comentarios.</li>
+      <li>Comercio electrónico: análisis de hábitos de compra.</li>
+      <li>Telecomunicaciones: procesamiento de registros de llamadas.</li>
+      <li>Finanzas: análisis de grandes volúmenes de transacciones.</li>
+    </ul>
+  </section>
+
+  <!-- Script -->
+  <section>
+    <h3>Ejemplo de Script en Pig Latin</h3>
 
 <pre><code>
-datos = LOAD 'ventas.csv'
+datos = LOAD 'estudiantes.csv'
 USING PigStorage(',')
-AS (id:int, producto:chararray, ventas:int);
+AS (nombre:chararray, calificacion:int);
 
-resultado = FILTER datos BY ventas > 100;
+aprobados = FILTER datos
+BY calificacion >= 70;
 
-DUMP resultado;
+DUMP aprobados;
 </code></pre>
 
     <p>
-      Este script carga un archivo de ventas y muestra únicamente los registros
-      con ventas mayores a 100.
+      El script carga un archivo de estudiantes y muestra únicamente
+      aquellos que aprobaron con una calificación igual o superior a 70.
     </p>
   </section>
 
+  <!-- Explicación -->
+  <section>
+    <h3>Explicación del Script</h3>
+
+    <ul>
+      <li><strong>LOAD:</strong> carga los datos desde un archivo.</li>
+      <li><strong>PigStorage:</strong> indica que los datos están separados por comas.</li>
+      <li><strong>FILTER:</strong> selecciona registros que cumplen una condición.</li>
+      <li><strong>DUMP:</strong> muestra los resultados obtenidos.</li>
+    </ul>
+
+    <p class="tag">
+      Pig traduce automáticamente estas instrucciones a tareas ejecutables en Hadoop.
+    </p>
+  </section>
+
+  <!-- Conclusión -->
   <section class="center">
     <h2>Conclusión</h2>
 
     <p>
       Apache Pig simplifica el procesamiento de grandes volúmenes de datos
-      mediante el lenguaje Pig Latin.
+      mediante el uso del lenguaje Pig Latin.
+    </p>
+
+    <p>
+      Es especialmente útil para tareas ETL, limpieza y preparación de datos
+      dentro del ecosistema Hadoop.
     </p>
 
     <p class="tag">
-      Menos código, mayor productividad y facilidad para tareas ETL.
+      Menos código, mayor productividad y una forma más sencilla de trabajar con Big Data.
     </p>
   </section>
 
