@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Apache Pig</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css">
+
+  <style>
+    .reveal {
+      background: linear-gradient(
+        135deg,
+        #052e16,
+        #14532d,
+        #166534
+      ) !important;
+    }
+
+    .reveal h2,
+    .reveal h3 {
+      color: #ffffff;
+    }
+
+    .reveal p,
+    .reveal li {
+      color: #e5e7eb;
+      font-size: 1.05em;
+    }
+
+    section {
+      text-align: left;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .tag {
+      color: #86efac;
+      font-weight: bold;
+    }
+
+    pre {
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+  <section class="center">
+    <h2>🐷 Apache Pig</h2>
+    <p>Lenguaje de Alto Nivel para Análisis de Datos</p>
+    <p>Procesamiento de Datos en la Nube</p>
+  </section>
+
+  <section>
+    <h3>¿Qué es Apache Pig?</h3>
+
+    <p>
+      Apache Pig es una plataforma de procesamiento de datos diseñada para trabajar
+      con grandes volúmenes de información dentro del ecosistema Hadoop.
+    </p>
+
+    <p>
+      Utiliza un lenguaje llamado <strong>Pig Latin</strong>, que simplifica la
+      creación de procesos de análisis y transformación de datos.
+    </p>
+  </section>
+
+  <section>
+    <h3>Características</h3>
+
+    <ul>
+      <li>Lenguaje de alto nivel.</li>
+      <li>Funciona sobre Hadoop.</li>
+      <li>Utiliza Pig Latin.</li>
+      <li>Convierte scripts en trabajos MapReduce.</li>
+      <li>Procesa grandes cantidades de datos.</li>
+      <li>Maneja datos estructurados y semiestructurados.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>¿Cómo funciona?</h3>
+
+    <ol>
+      <li>El usuario escribe un script en Pig Latin.</li>
+      <li>Apache Pig interpreta el script.</li>
+      <li>El script se convierte en trabajos MapReduce.</li>
+      <li>Hadoop ejecuta el procesamiento.</li>
+      <li>Se generan los resultados.</li>
+    </ol>
+
+    <p class="tag">
+      El usuario no necesita programar MapReduce directamente en Java.
+    </p>
+  </section>
+
+  <section>
+    <h3>Ventajas</h3>
+
+    <ul>
+      <li>Menos código que Java MapReduce.</li>
+      <li>Fácil de aprender para analistas.</li>
+      <li>Reduce tiempos de desarrollo.</li>
+      <li>Facilita procesos ETL.</li>
+      <li>Permite trabajar con Big Data de forma más sencilla.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Desventajas</h3>
+
+    <ul>
+      <li>Depende del ecosistema Hadoop.</li>
+      <li>Menor rendimiento que código MapReduce optimizado manualmente.</li>
+      <li>Requiere conocimientos básicos de Hadoop.</li>
+      <li>Actualmente existen alternativas más modernas como Apache Spark.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Casos de Uso</h3>
+
+    <ul>
+      <li>Procesos ETL (Extract, Transform, Load).</li>
+      <li>Limpieza y transformación de datos.</li>
+      <li>Procesamiento de registros (logs).</li>
+      <li>Preparación de datos para análisis.</li>
+      <li>Minería de datos y Business Intelligence.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Ejemplos de Aplicación</h3>
+
+    <ul>
+      <li>Análisis de comportamiento de usuarios.</li>
+      <li>Procesamiento de grandes volúmenes de registros web.</li>
+      <li>Preparación de información para reportes empresariales.</li>
+      <li>Integración de datos provenientes de múltiples fuentes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Ejemplo de Pig Latin</h3>
+
+<pre><code>
+datos = LOAD 'ventas.csv'
+USING PigStorage(',')
+AS (id:int, producto:chararray, ventas:int);
+
+resultado = FILTER datos BY ventas > 100;
+
+DUMP resultado;
+</code></pre>
+
+    <p>
+      Este script carga un archivo de ventas y muestra únicamente los registros
+      con ventas mayores a 100.
+    </p>
+  </section>
+
+  <section class="center">
+    <h2>Conclusión</h2>
+
+    <p>
+      Apache Pig simplifica el procesamiento de grandes volúmenes de datos
+      mediante el lenguaje Pig Latin.
+    </p>
+
+    <p class="tag">
+      Menos código, mayor productividad y facilidad para tareas ETL.
+    </p>
+  </section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+
+<script>
+Reveal.initialize({
+  transition: 'slide'
+});
+</script>
+
+</body>
+</html>
